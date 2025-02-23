@@ -64,3 +64,7 @@ If no error is mapped, it will return the error.
 ### Features
 
 - Ultra fast compile and hot reload times with RS-Pack
+
+
+### TODO
+- Enable source-maps on dev mode.
