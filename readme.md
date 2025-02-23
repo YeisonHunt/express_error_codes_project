@@ -45,8 +45,15 @@ will get:
 ```
 
 ### How to run
+
 ```bash
-npm run dev-source
+npm run dev
+```
+
+If u want to see source maps, but it should be compiled first as follows:
+
+```bash
+npm run build && npm run dev-source
 ```
 
 This command will tell you exactly the file that originated the error
