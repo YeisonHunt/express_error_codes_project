@@ -6,8 +6,9 @@
   "sideEffects": ["**/*.css", "**/*.less", "**/*.scss"],
   "main": "index.js",
   "scripts": {
-    "build": "cross-env BUILD=true rspack build",
-    "dev": "rspack serve"
+    "build": "cross-env BUILD=true NODE_ENV=production rspack build",
+    "dev": "rspack serve",
+    "serve-prod": "node --enable-source-maps dist/main.js"
   },
   "dependencies": {
     "express": "4.21.2"

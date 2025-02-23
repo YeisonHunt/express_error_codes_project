@@ -1,11 +1,15 @@
 const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('@rspack/cli').Configuration} */
 const config = {
   context: __dirname,
   target: 'node',
   entry: {
-    main: ['@rspack/core/hot/poll?100', './src/main.ts'],
+    main: isProd
+      ? ['./src/main.ts']
+      : ['@rspack/core/hot/poll?100', './src/main.ts'],
   },
   resolve: {
     extensions: ['...', '.ts', '.tsx', '.jsx'],
@@ -33,7 +37,7 @@ const config = {
   },
   externalsType: 'commonjs',
   plugins: [
-    !process.env.BUILD &&
+    !isProd &&
       new RunScriptWebpackPlugin({
         name: 'main.js',
         autoRestart: false,
@@ -46,4 +50,5 @@ const config = {
     },
   },
 };
+
 module.exports = config;
