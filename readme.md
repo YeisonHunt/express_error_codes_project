@@ -10,21 +10,21 @@ curl http://localhost:4000/users/999
 will get:
 ```bash
 {
-  timestamp: '2025-02-23T15:58:25.974Z',
+  timestamp: '2025-02-23T16:26:03.554Z',
   error: {
     name: 'APIError',
     message: 'User with ID 999 not found',
     stack: 'APIError: User with ID 999 not found\n' +
-      '    at /home/yeison/projects/rspack-examples/rspack/express/dist/main.js:21899:19\n' +
-      '    at Layer.handle [as handle_request] (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8487:5)\n' +
-      '    at next (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8727:13)\n' +
-      '    at Route.dispatch (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8697:3)\n' +
-      '    at Layer.handle [as handle_request] (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8487:5)\n' +
-      '    at /home/yeison/projects/rspack-examples/rspack/express/dist/main.js:7998:15\n' +
-      '    at param (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8079:14)\n' +
-      '    at param (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8090:14)\n' +
-      '    at Function.process_params (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:8135:3)\n' +
-      '    at next (/home/yeison/projects/rspack-examples/rspack/express/dist/main.js:7994:10)',
+      '    at eval (webpack-internal:///./src/routes/user-routes.ts:37:19)\n' +
+      '    at Layer.handle [as handle_request] (webpack-internal:///./node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (webpack-internal:///./node_modules/express/lib/router/route.js:149:13)\n' +
+      '    at Route.dispatch (webpack-internal:///./node_modules/express/lib/router/route.js:119:3)\n' +
+      '    at Layer.handle [as handle_request] (webpack-internal:///./node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at eval (webpack-internal:///./node_modules/express/lib/router/index.js:284:15)\n' +
+      '    at param (webpack-internal:///./node_modules/express/lib/router/index.js:365:14)\n' +
+      '    at param (webpack-internal:///./node_modules/express/lib/router/index.js:376:14)\n' +
+      '    at Function.process_params (webpack-internal:///./node_modules/express/lib/router/index.js:421:3)\n' +
+      '    at next (webpack-internal:///./node_modules/express/lib/router/index.js:280:10)',
     code: 2001,
     details: { userId: 999 }
   },
@@ -32,12 +32,9 @@ will get:
     method: 'GET',
     url: '/users/999',
     headers: {
-      'user-agent': 'PostmanRuntime/7.43.0',
-      accept: '*/*',
-      'postman-token': 'c1c9e2de-bb87-4ce9-9c99-2bf64e096c50',
       host: 'localhost:4000',
-      'accept-encoding': 'gzip, deflate, br',
-      connection: 'keep-alive'
+      'user-agent': 'curl/7.81.0',
+      accept: '*/*'
     },
     body: {}
   }
@@ -66,5 +63,3 @@ If no error is mapped, it will return the error.
 - Ultra fast compile and hot reload times with RS-Pack
 
 
-### TODO
-- Enable source-maps on dev mode.

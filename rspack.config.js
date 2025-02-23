@@ -39,6 +39,7 @@ const config = {
         autoRestart: false,
       }),
   ].filter(Boolean),
+  devtool: 'eval-source-map',
   devServer: {
     devMiddleware: {
       writeToDisk: true,

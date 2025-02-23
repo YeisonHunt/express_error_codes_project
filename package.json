@@ -7,15 +7,14 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env BUILD=true rspack build",
-    "dev": "rspack serve",
-    "dev-source": "node --enable-source-maps dist/main.js"
+    "dev": "rspack serve"
   },
   "dependencies": {
     "express": "4.21.2"
   },
   "devDependencies": {
-    "@rspack/cli": "1.2.3",
-    "@rspack/core": "1.2.3",
+    "@rspack/cli": "1.2.5",
+    "@rspack/core": "1.2.5",
     "run-script-webpack-plugin": ""
   }
 }
