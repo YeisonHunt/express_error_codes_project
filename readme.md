@@ -53,3 +53,7 @@ This command will tell you exactly the file that originated the error
 BUT to the client it will only return the code
 
 If no error is mapped, it will return the error. 
+
+### Features
+
+- Ultra fast compile and hot reload times with RS-Pack
